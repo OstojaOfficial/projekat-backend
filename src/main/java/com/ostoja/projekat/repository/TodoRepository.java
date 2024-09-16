@@ -13,7 +13,6 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 	List<Todo> findByTitle(String title);
 
-	// Custom query
 	@Query("SELECT b FROM Todo b WHERE b.createdAt > :date")
 	List<Todo> findByPublishedDateAfter(@Param("date") LocalDateTime date);
 
