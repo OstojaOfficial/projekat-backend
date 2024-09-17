@@ -36,7 +36,7 @@ public class TodoService {
         return TodoRepository.findByTitle(title);
     }
 
-    public List<Todo> findByPublishedDateAfter(LocalDateTime date) {
-        return TodoRepository.findByPublishedDateAfter(date);
+    public List<Todo> findByCreatedDateAfter(LocalDateTime date) {
+        return TodoRepository.findByCreatedDateAfter(date);
     }
 }
